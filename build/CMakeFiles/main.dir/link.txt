@@ -1,0 +1,1 @@
+/usr/bin/c++  -g -std=c++11 -g -rdynamic CMakeFiles/main.dir/main.cpp.o -o "/project/zero;/include/main" 

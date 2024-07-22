@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /project/zero/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/mian.dir/all
+all: CMakeFiles/main.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/mian.dir/clean
+clean: CMakeFiles/main.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/mian.dir
+# Target rules for target CMakeFiles/main.dir
 
 # All Build rule for target.
-CMakeFiles/mian.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mian.dir/build.make CMakeFiles/mian.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mian.dir/build.make CMakeFiles/mian.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/project/zero/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19 "Built target mian"
-.PHONY : CMakeFiles/mian.dir/all
+CMakeFiles/main.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/project/zero/build/CMakeFiles --progress-num=1,2 "Built target main"
+.PHONY : CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/mian.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /project/zero/build/CMakeFiles 19
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mian.dir/all
+CMakeFiles/main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /project/zero/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /project/zero/build/CMakeFiles 0
-.PHONY : CMakeFiles/mian.dir/rule
+.PHONY : CMakeFiles/main.dir/rule
 
 # Convenience name for target.
-mian: CMakeFiles/mian.dir/rule
-.PHONY : mian
+main: CMakeFiles/main.dir/rule
+.PHONY : main
 
 # clean rule for target.
-CMakeFiles/mian.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mian.dir/build.make CMakeFiles/mian.dir/clean
-.PHONY : CMakeFiles/mian.dir/clean
+CMakeFiles/main.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/clean
+.PHONY : CMakeFiles/main.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
