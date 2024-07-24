@@ -1,3 +1,9 @@
 /project/zero/build/CMakeFiles/main.dir
 /project/zero/build/CMakeFiles/edit_cache.dir
 /project/zero/build/CMakeFiles/rebuild_cache.dir
+/project/zero/build/base/CMakeFiles/base.dir
+/project/zero/build/base/CMakeFiles/edit_cache.dir
+/project/zero/build/base/CMakeFiles/rebuild_cache.dir
+/project/zero/build/net/CMakeFiles/src.dir
+/project/zero/build/net/CMakeFiles/edit_cache.dir
+/project/zero/build/net/CMakeFiles/rebuild_cache.dir

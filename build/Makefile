@@ -113,6 +113,7 @@ preinstall/fast:
 
 # clear depends
 depend:
+	$(CMAKE_COMMAND) -P /project/zero/build/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
@@ -128,6 +129,32 @@ main: cmake_check_build_system
 main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
+
+#=============================================================================
+# Target rules for targets named base
+
+# Build rule for target.
+base: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 base
+.PHONY : base
+
+# fast build rule for target.
+base/fast:
+	$(MAKE) $(MAKESILENT) -f base/CMakeFiles/base.dir/build.make base/CMakeFiles/base.dir/build
+.PHONY : base/fast
+
+#=============================================================================
+# Target rules for targets named src
+
+# Build rule for target.
+src: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src
+.PHONY : src
+
+# fast build rule for target.
+src/fast:
+	$(MAKE) $(MAKESILENT) -f net/CMakeFiles/src.dir/build.make net/CMakeFiles/src.dir/build
+.PHONY : src/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -161,7 +188,9 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... base"
 	@echo "... main"
+	@echo "... src"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -176,6 +205,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
+	$(CMAKE_COMMAND) -P /project/zero/build/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
