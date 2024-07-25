@@ -1,3 +1,0 @@
-/project/zero/net/build/CMakeFiles/src.dir
-/project/zero/net/build/CMakeFiles/edit_cache.dir
-/project/zero/net/build/CMakeFiles/rebuild_cache.dir

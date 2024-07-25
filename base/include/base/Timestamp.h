@@ -33,8 +33,8 @@ bool valid() const{ return microSecondsSinceEpoch_>0; }
 
 int64_t microSecondsSinceEpoch() const { return microSecondsSinceEpoch_;}
 
-time_t microSecondsSinceEpoch() const {
-    return static_cast<time_t>(microSecondsSinceEpoch_/KMicroSecondsPerSecond);
+time_t secondsSinceEpoch() const {
+    return static_cast<time_t>(microSecondsSinceEpoch_ / KMicroSecondsPerSecond);
 }
 static Timestamp now();
 static Timestamp invalid() {

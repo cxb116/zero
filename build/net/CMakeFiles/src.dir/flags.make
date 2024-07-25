@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/project/zero/net/include -I/project/zero/base/include
+CXX_INCLUDES = -I/project/zero/base/include -I/project/zero/net/include
 
-CXX_FLAGS = -O3 -DNDEBUG -std=c++20
+CXX_FLAGS = -g -std=c++11
 

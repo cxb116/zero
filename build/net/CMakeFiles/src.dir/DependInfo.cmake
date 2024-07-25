@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/project/zero/net/src/HttpResponse.cpp" "net/CMakeFiles/src.dir/src/HttpResponse.cpp.o" "gcc" "net/CMakeFiles/src.dir/src/HttpResponse.cpp.o.d"
+  "/project/zero/net/src/main.cpp" "net/CMakeFiles/src.dir/src/main.cpp.o" "gcc" "net/CMakeFiles/src.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links.

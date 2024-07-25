@@ -1,3 +1,0 @@
-/project/zero/base/build/CMakeFiles/base.dir
-/project/zero/base/build/CMakeFiles/edit_cache.dir
-/project/zero/base/build/CMakeFiles/rebuild_cache.dir

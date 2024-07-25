@@ -2,7 +2,7 @@
 #include <base/copyable.h>
 #include <base/StringPiece.h>
 #include <base/Types.h>
-#include <net/Endian.h>
+#include <base/Endian.h>
 #include <algorithm>
 #include <vector>
 #include <assert.h>

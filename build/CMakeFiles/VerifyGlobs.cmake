@@ -6,6 +6,7 @@ cmake_policy(SET CMP0009 NEW)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/project/zero/base/include/*.h")
 set(OLD_GLOB
   "/project/zero/base/include/base/Buffer.h"
+  "/project/zero/base/include/base/Endian.h"
   "/project/zero/base/include/base/StringPiece.h"
   "/project/zero/base/include/base/Timestamp.h"
   "/project/zero/base/include/base/Types.h"
@@ -29,7 +30,6 @@ endif()
 # srcs at net/CMakeLists.txt:1 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/project/zero/net/include/*.h")
 set(OLD_GLOB
-  "/project/zero/net/include/net/Endian.h"
   "/project/zero/net/include/net/HttpRequst.h"
   "/project/zero/net/include/net/HttpResponse.h"
   )
@@ -42,6 +42,7 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/project/zero/net/src/*.cpp")
 set(OLD_GLOB
   "/project/zero/net/src/HttpResponse.cpp"
+  "/project/zero/net/src/main.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

@@ -155,6 +155,30 @@ src/HttpResponse.cpp.s:
 	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f net/CMakeFiles/src.dir/build.make net/CMakeFiles/src.dir/src/HttpResponse.cpp.s
 .PHONY : src/HttpResponse.cpp.s
 
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f net/CMakeFiles/src.dir/build.make net/CMakeFiles/src.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f net/CMakeFiles/src.dir/build.make net/CMakeFiles/src.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f net/CMakeFiles/src.dir/build.make net/CMakeFiles/src.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -167,6 +191,9 @@ help:
 	@echo "... src/HttpResponse.o"
 	@echo "... src/HttpResponse.i"
 	@echo "... src/HttpResponse.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 
