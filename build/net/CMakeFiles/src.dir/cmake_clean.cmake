@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/src.dir/src/HttpResponse.cpp.o"
   "CMakeFiles/src.dir/src/HttpResponse.cpp.o.d"
+  "CMakeFiles/src.dir/src/SocketsOps.cpp.o"
+  "CMakeFiles/src.dir/src/SocketsOps.cpp.o.d"
   "CMakeFiles/src.dir/src/main.cpp.o"
   "CMakeFiles/src.dir/src/main.cpp.o.d"
   "src"

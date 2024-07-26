@@ -1,1 +1,1 @@
-/usr/bin/c++ -g -rdynamic CMakeFiles/src.dir/src/HttpResponse.cpp.o CMakeFiles/src.dir/src/main.cpp.o -o src  ../base/libbase.a 
+/usr/bin/c++ -g -rdynamic CMakeFiles/src.dir/src/HttpResponse.cpp.o CMakeFiles/src.dir/src/SocketsOps.cpp.o CMakeFiles/src.dir/src/main.cpp.o -o src  ../base/libbase.a 

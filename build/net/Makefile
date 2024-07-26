@@ -155,6 +155,30 @@ src/HttpResponse.cpp.s:
 	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f net/CMakeFiles/src.dir/build.make net/CMakeFiles/src.dir/src/HttpResponse.cpp.s
 .PHONY : src/HttpResponse.cpp.s
 
+src/SocketsOps.o: src/SocketsOps.cpp.o
+.PHONY : src/SocketsOps.o
+
+# target to build an object file
+src/SocketsOps.cpp.o:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f net/CMakeFiles/src.dir/build.make net/CMakeFiles/src.dir/src/SocketsOps.cpp.o
+.PHONY : src/SocketsOps.cpp.o
+
+src/SocketsOps.i: src/SocketsOps.cpp.i
+.PHONY : src/SocketsOps.i
+
+# target to preprocess a source file
+src/SocketsOps.cpp.i:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f net/CMakeFiles/src.dir/build.make net/CMakeFiles/src.dir/src/SocketsOps.cpp.i
+.PHONY : src/SocketsOps.cpp.i
+
+src/SocketsOps.s: src/SocketsOps.cpp.s
+.PHONY : src/SocketsOps.s
+
+# target to generate assembly for a file
+src/SocketsOps.cpp.s:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f net/CMakeFiles/src.dir/build.make net/CMakeFiles/src.dir/src/SocketsOps.cpp.s
+.PHONY : src/SocketsOps.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -191,6 +215,9 @@ help:
 	@echo "... src/HttpResponse.o"
 	@echo "... src/HttpResponse.i"
 	@echo "... src/HttpResponse.s"
+	@echo "... src/SocketsOps.o"
+	@echo "... src/SocketsOps.i"
+	@echo "... src/SocketsOps.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
