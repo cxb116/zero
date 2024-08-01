@@ -155,6 +155,54 @@ src/Buffer.cpp.s:
 	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/base.dir/build.make base/CMakeFiles/base.dir/src/Buffer.cpp.s
 .PHONY : src/Buffer.cpp.s
 
+src/ProcessInfo.o: src/ProcessInfo.cpp.o
+.PHONY : src/ProcessInfo.o
+
+# target to build an object file
+src/ProcessInfo.cpp.o:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/base.dir/build.make base/CMakeFiles/base.dir/src/ProcessInfo.cpp.o
+.PHONY : src/ProcessInfo.cpp.o
+
+src/ProcessInfo.i: src/ProcessInfo.cpp.i
+.PHONY : src/ProcessInfo.i
+
+# target to preprocess a source file
+src/ProcessInfo.cpp.i:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/base.dir/build.make base/CMakeFiles/base.dir/src/ProcessInfo.cpp.i
+.PHONY : src/ProcessInfo.cpp.i
+
+src/ProcessInfo.s: src/ProcessInfo.cpp.s
+.PHONY : src/ProcessInfo.s
+
+# target to generate assembly for a file
+src/ProcessInfo.cpp.s:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/base.dir/build.make base/CMakeFiles/base.dir/src/ProcessInfo.cpp.s
+.PHONY : src/ProcessInfo.cpp.s
+
+src/TimeZone.o: src/TimeZone.cpp.o
+.PHONY : src/TimeZone.o
+
+# target to build an object file
+src/TimeZone.cpp.o:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/base.dir/build.make base/CMakeFiles/base.dir/src/TimeZone.cpp.o
+.PHONY : src/TimeZone.cpp.o
+
+src/TimeZone.i: src/TimeZone.cpp.i
+.PHONY : src/TimeZone.i
+
+# target to preprocess a source file
+src/TimeZone.cpp.i:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/base.dir/build.make base/CMakeFiles/base.dir/src/TimeZone.cpp.i
+.PHONY : src/TimeZone.cpp.i
+
+src/TimeZone.s: src/TimeZone.cpp.s
+.PHONY : src/TimeZone.s
+
+# target to generate assembly for a file
+src/TimeZone.cpp.s:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/base.dir/build.make base/CMakeFiles/base.dir/src/TimeZone.cpp.s
+.PHONY : src/TimeZone.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -167,6 +215,12 @@ help:
 	@echo "... src/Buffer.o"
 	@echo "... src/Buffer.i"
 	@echo "... src/Buffer.s"
+	@echo "... src/ProcessInfo.o"
+	@echo "... src/ProcessInfo.i"
+	@echo "... src/ProcessInfo.s"
+	@echo "... src/TimeZone.o"
+	@echo "... src/TimeZone.i"
+	@echo "... src/TimeZone.s"
 .PHONY : help
 
 

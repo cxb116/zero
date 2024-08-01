@@ -1,4 +1,5 @@
 #pragma once
+#include <base/StringPiece.h>
 #include <string.h>
 #include <iosfwd>
 #include "Types.h"
@@ -6,8 +7,7 @@
 namespace zero
 {
 class StringArg {
-private:
-    const char* str_;
+
 public:
     StringArg(const char* str) 
         :str_(str) {};
@@ -15,6 +15,10 @@ public:
      StringArg(const std::string& str) 
         :str_(str.c_str()){
     }
+
+    const char* c_str() const { return str_;}
+private:
+    const char* str_;
 };
 
 class StringPiece {

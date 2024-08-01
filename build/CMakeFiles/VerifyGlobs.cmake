@@ -6,8 +6,13 @@ cmake_policy(SET CMP0009 NEW)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/project/zero/base/include/*.h")
 set(OLD_GLOB
   "/project/zero/base/include/base/Buffer.h"
+  "/project/zero/base/include/base/CurrentThread.h"
   "/project/zero/base/include/base/Endian.h"
+  "/project/zero/base/include/base/FileUtil.h"
+  "/project/zero/base/include/base/Mutex.h"
+  "/project/zero/base/include/base/ProcessInfo.h"
   "/project/zero/base/include/base/StringPiece.h"
+  "/project/zero/base/include/base/TimeZone.h"
   "/project/zero/base/include/base/Timestamp.h"
   "/project/zero/base/include/base/Types.h"
   "/project/zero/base/include/base/copyable.h"
@@ -21,6 +26,8 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/project/zero/base/src/*.cpp")
 set(OLD_GLOB
   "/project/zero/base/src/Buffer.cpp"
+  "/project/zero/base/src/ProcessInfo.cpp"
+  "/project/zero/base/src/TimeZone.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

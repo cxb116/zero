@@ -83,17 +83,49 @@ base/CMakeFiles/base.dir/src/Buffer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/base.dir/src/Buffer.cpp.s"
 	cd /project/zero/build/base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /project/zero/base/src/Buffer.cpp -o CMakeFiles/base.dir/src/Buffer.cpp.s
 
+base/CMakeFiles/base.dir/src/ProcessInfo.cpp.o: base/CMakeFiles/base.dir/flags.make
+base/CMakeFiles/base.dir/src/ProcessInfo.cpp.o: /project/zero/base/src/ProcessInfo.cpp
+base/CMakeFiles/base.dir/src/ProcessInfo.cpp.o: base/CMakeFiles/base.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/project/zero/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object base/CMakeFiles/base.dir/src/ProcessInfo.cpp.o"
+	cd /project/zero/build/base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT base/CMakeFiles/base.dir/src/ProcessInfo.cpp.o -MF CMakeFiles/base.dir/src/ProcessInfo.cpp.o.d -o CMakeFiles/base.dir/src/ProcessInfo.cpp.o -c /project/zero/base/src/ProcessInfo.cpp
+
+base/CMakeFiles/base.dir/src/ProcessInfo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/base.dir/src/ProcessInfo.cpp.i"
+	cd /project/zero/build/base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /project/zero/base/src/ProcessInfo.cpp > CMakeFiles/base.dir/src/ProcessInfo.cpp.i
+
+base/CMakeFiles/base.dir/src/ProcessInfo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/base.dir/src/ProcessInfo.cpp.s"
+	cd /project/zero/build/base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /project/zero/base/src/ProcessInfo.cpp -o CMakeFiles/base.dir/src/ProcessInfo.cpp.s
+
+base/CMakeFiles/base.dir/src/TimeZone.cpp.o: base/CMakeFiles/base.dir/flags.make
+base/CMakeFiles/base.dir/src/TimeZone.cpp.o: /project/zero/base/src/TimeZone.cpp
+base/CMakeFiles/base.dir/src/TimeZone.cpp.o: base/CMakeFiles/base.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/project/zero/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object base/CMakeFiles/base.dir/src/TimeZone.cpp.o"
+	cd /project/zero/build/base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT base/CMakeFiles/base.dir/src/TimeZone.cpp.o -MF CMakeFiles/base.dir/src/TimeZone.cpp.o.d -o CMakeFiles/base.dir/src/TimeZone.cpp.o -c /project/zero/base/src/TimeZone.cpp
+
+base/CMakeFiles/base.dir/src/TimeZone.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/base.dir/src/TimeZone.cpp.i"
+	cd /project/zero/build/base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /project/zero/base/src/TimeZone.cpp > CMakeFiles/base.dir/src/TimeZone.cpp.i
+
+base/CMakeFiles/base.dir/src/TimeZone.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/base.dir/src/TimeZone.cpp.s"
+	cd /project/zero/build/base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /project/zero/base/src/TimeZone.cpp -o CMakeFiles/base.dir/src/TimeZone.cpp.s
+
 # Object files for target base
 base_OBJECTS = \
-"CMakeFiles/base.dir/src/Buffer.cpp.o"
+"CMakeFiles/base.dir/src/Buffer.cpp.o" \
+"CMakeFiles/base.dir/src/ProcessInfo.cpp.o" \
+"CMakeFiles/base.dir/src/TimeZone.cpp.o"
 
 # External object files for target base
 base_EXTERNAL_OBJECTS =
 
 base/libbase.a: base/CMakeFiles/base.dir/src/Buffer.cpp.o
+base/libbase.a: base/CMakeFiles/base.dir/src/ProcessInfo.cpp.o
+base/libbase.a: base/CMakeFiles/base.dir/src/TimeZone.cpp.o
 base/libbase.a: base/CMakeFiles/base.dir/build.make
 base/libbase.a: base/CMakeFiles/base.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/project/zero/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libbase.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/project/zero/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libbase.a"
 	cd /project/zero/build/base && $(CMAKE_COMMAND) -P CMakeFiles/base.dir/cmake_clean_target.cmake
 	cd /project/zero/build/base && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/base.dir/link.txt --verbose=$(VERBOSE)
 
