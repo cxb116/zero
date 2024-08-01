@@ -1,5 +1,5 @@
 #include <base/Types.h>
-#include <base/Logging.h>
+
 #include <base/Endian.h>
 #include <net/SocketsOps.h>
 #include <boost/implicit_cast.hpp>
@@ -10,6 +10,7 @@
 #include <sys/uio.h>
 #include <unistd.h>
 #include <stdio.h>
+
 using namespace zero;
 using namespace zero::net;
 
@@ -35,26 +36,26 @@ struct sockaddr* sockets::sockaddr_cast(struct sockaddr_in6* addr){
     return static_cast<struct sockaddr*>(boost::implicit_cast<void*>(addr));
 }
 
-const struct sockaddr* sockets::sockaddr_cast(const struct sockaddr_in* addr){
-    return static_cast<const struct sockaddr*>(boost::implicit_cast<void*>(addr));
-}
+// const struct sockaddr* sockets::sockaddr_cast(const struct sockaddr_in* addr){
+//     return static_cast<const struct sockaddr*>(boost::implicit_cast<void*>(addr));
+// }
 
-struct sockaddr* sockets::sockaddr_cast(struct sockaddr_in* addr){
-    return static_cast<struct sockaddr*>(boost::implicit_cast<void*>(addr));
-}
+// struct sockaddr* sockets::sockaddr_cast(struct sockaddr_in* addr){
+//     return static_cast<struct sockaddr*>(implicit_cast<void*>(addr));
+// }
 
-const struct sockaddr_in6* sockets::sockaddr_in6_cast(const struct sockaddr_in* addr) {
-    return static_cast<const struct sockaddr_in6*> (boost::implicit_cast<void*>(addr));
-}
+// const struct sockaddr_in6* sockets::sockaddr_in6_cast(const struct sockaddr_in* addr) {
+//     return static_cast<const struct sockaddr_in6*> (implicit_cast<void*>(addr));
+// }
 
-const struct sockaddr_in* sockets::sockaddr_in_cast(const struct sockaddr_in6* addr) {
-    return static_cast<const struct sockaddr_in*>(boost::implicit_cast<void*>(addr));
-}
+// const struct sockaddr_in* sockets::sockaddr_in_cast(const struct sockaddr_in6* addr) {
+//     return static_cast<const struct sockaddr_in*>(implicit_cast<void*>(addr));
+// }
 
 int sockets::createNonblockingOrDie(sa_family_t family) {
     int sockfd = ::socket(family, SOCK_STREAM | SOCK_NONBLOCK |SOCK_CLOEXEC, IPPROTO_TCP);
     if(sockfd < 0) {
-        LOG_SYSFATAL<<"sockets::createNonblockingOrDie";
+        printf("sockets::createNonblockingOrDie\n");
     }
     return sockfd;
 }
@@ -62,7 +63,7 @@ int sockets::createNonblockingOrDie(sa_family_t family) {
 void sockets::listenOrDie(int sockfd) {
     int ret = ::listen(sockfd,SOMAXCONN);
     if(ret < 0) {
-        LOG_SYSFATAL <<"sockets::listenOrDie";
+        printf("sockets::listenOrDie");
     }
 }
 
@@ -91,14 +92,14 @@ ssize_t sockets::readv(int sockfd,const struct iovec* iov,int iovcnt) {
 
 void sockets::close(int sockfd){
     if(::close(sockfd) < 0) {
-        LOG_SYSERR<<"sockets::close";
+         printf("sockets::close");
     }
     printf("sockets close success \n");
 }
 
 void sockets::shutdownWrite(int sockfd) {
     if(::shutdown(sockfd,SHUT_WR) < 0) {
-        LOG_SYSERR<<"sockets::shutdownWrite";
+        printf("sockets::shutdownWrite");
     } 
 }
 
@@ -126,7 +127,7 @@ void sockets::fromIpPort(const char* ip,uint16_t port,struct sockaddr_in* addr) 
     addr->sin_family = AF_INET;
     addr->sin_port = htons(port);
     if(::inet_pton(AF_INET,ip,&addr->sin_port)<=0) {
-        LOG_SYSERR<<"sockets:: fromIpPort";
+        printf("sockets:: fromIpPort");
     }
 }
 
@@ -145,7 +146,7 @@ struct sockaddr_in6 sockets::getLocalAddr(int sockfd) {
     memset(&localaddr,0,sizeof(localaddr));
     socklen_t addrlen = static_cast<socklen_t>(sizeof(localaddr));
     if(::getsockname(sockfd,sockaddr_cast(&localaddr),&addrlen)<0) {
-        LOG_SYSERR<<"sockets::getLocalAddr";
+         printf("sockets::getLocalAddr");
     }
     return localaddr;
 }
@@ -155,7 +156,7 @@ struct sockaddr_in6 sockets::getPeerAddr(int sockfd) {
     memset(&peeraddr,0,sizeof(peeraddr));
     socklen_t addrlen = static_cast<socklen_t>(sizeof(peeraddr));
     if(::getpeername(sockfd,sockaddr_cast(&peeraddr),&addrlen) < 0) {
-        LOG_SYSERR<<"sockets::getPeerAddr";
+         printf("sockets::getPeerAddr");
     }
     return peeraddr;
 }
