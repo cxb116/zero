@@ -11,7 +11,7 @@ namespace zero {
 class Channel;
 class Poller;
 class EventLoop {
-private:
+public:
     using Function = std::function<void()>;
     using poller_  = std::unique_ptr<Poller>;
     EventLoop();

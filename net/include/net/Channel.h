@@ -101,8 +101,9 @@ private:
     int index_;           
     /* weak_ptr 监视 shared_ptr 提升成功过访问，提升失败就不访问，就说明已经释放掉了 */
     std::weak_ptr<void> tie_; /* 防止手动调removeChannle */
-    bool tied_;             
-    bool eventHanding_;    /* 事件处理中*/
+    bool tied_;            /* 判断弱智能指针是否绑定 */
+    bool eventHanding_;    /* assert 事件处理中*/
+    bool addedToLoop_;     /* assert 跟新channel后才能~channel */
 
     /* 因为channel通道里面能够获取fd最终发生的具体事件revents,所以他负责调用具体事件的回调操作*/
     ReadEventCallback readCallback_;    /* 读回调 */
