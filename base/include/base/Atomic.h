@@ -5,25 +5,13 @@ namespace zero
 namespace detail
 {
 template<typename T>
-class AtomicIntegerT : noncopyable
+class AtomicIntegerT
 {
  public:
   AtomicIntegerT()
     : value_(0)
   {
   }
-
-  // uncomment if you need copying and assignment
-  //
-  // AtomicIntegerT(const AtomicIntegerT& that)
-  //   : value_(that.get())
-  // {}
-  //
-  // AtomicIntegerT& operator=(const AtomicIntegerT& that)
-  // {
-  //   getAndSet(that.get());
-  //   return *this;
-  // }
 
   T get()
   {

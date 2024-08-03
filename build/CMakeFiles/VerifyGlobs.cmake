@@ -5,13 +5,16 @@ cmake_policy(SET CMP0009 NEW)
 # srcs at base/CMakeLists.txt:2 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/project/zero/base/include/*.h")
 set(OLD_GLOB
+  "/project/zero/base/include/base/Atomic.h"
   "/project/zero/base/include/base/Buffer.h"
+  "/project/zero/base/include/base/Condition.h"
   "/project/zero/base/include/base/CurrentThread.h"
   "/project/zero/base/include/base/Endian.h"
   "/project/zero/base/include/base/FileUtil.h"
   "/project/zero/base/include/base/Mutex.h"
   "/project/zero/base/include/base/ProcessInfo.h"
   "/project/zero/base/include/base/StringPiece.h"
+  "/project/zero/base/include/base/Thread.h"
   "/project/zero/base/include/base/TimeZone.h"
   "/project/zero/base/include/base/Timestamp.h"
   "/project/zero/base/include/base/Types.h"
@@ -26,7 +29,10 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/project/zero/base/src/*.cpp")
 set(OLD_GLOB
   "/project/zero/base/src/Buffer.cpp"
+  "/project/zero/base/src/Condition.cpp"
+  "/project/zero/base/src/CurrentThread.cpp"
   "/project/zero/base/src/ProcessInfo.cpp"
+  "/project/zero/base/src/Thread.cpp"
   "/project/zero/base/src/TimeZone.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
@@ -37,9 +43,15 @@ endif()
 # srcs at net/CMakeLists.txt:1 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/project/zero/net/include/*.h")
 set(OLD_GLOB
+  "/project/zero/net/include/net/Callbacks.h"
+  "/project/zero/net/include/net/Channel.h"
+  "/project/zero/net/include/net/EventLoop.h"
   "/project/zero/net/include/net/HttpRequst.h"
   "/project/zero/net/include/net/HttpResponse.h"
+  "/project/zero/net/include/net/HttpServer.h"
+  "/project/zero/net/include/net/InetAddress.h"
   "/project/zero/net/include/net/SocketsOps.h"
+  "/project/zero/net/include/net/TcpServer.h"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -49,8 +61,11 @@ endif()
 # srcs at net/CMakeLists.txt:1 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/project/zero/net/src/*.cpp")
 set(OLD_GLOB
+  "/project/zero/net/src/EventLoop.cpp"
   "/project/zero/net/src/HttpResponse.cpp"
+  "/project/zero/net/src/InetAddress.cpp"
   "/project/zero/net/src/SocketsOps.cpp"
+  "/project/zero/net/src/TcpServer.cpp"
   "/project/zero/net/src/main.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")

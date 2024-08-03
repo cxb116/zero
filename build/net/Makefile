@@ -131,6 +131,30 @@ src/fast:
 	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f net/CMakeFiles/src.dir/build.make net/CMakeFiles/src.dir/build
 .PHONY : src/fast
 
+src/EventLoop.o: src/EventLoop.cpp.o
+.PHONY : src/EventLoop.o
+
+# target to build an object file
+src/EventLoop.cpp.o:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f net/CMakeFiles/src.dir/build.make net/CMakeFiles/src.dir/src/EventLoop.cpp.o
+.PHONY : src/EventLoop.cpp.o
+
+src/EventLoop.i: src/EventLoop.cpp.i
+.PHONY : src/EventLoop.i
+
+# target to preprocess a source file
+src/EventLoop.cpp.i:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f net/CMakeFiles/src.dir/build.make net/CMakeFiles/src.dir/src/EventLoop.cpp.i
+.PHONY : src/EventLoop.cpp.i
+
+src/EventLoop.s: src/EventLoop.cpp.s
+.PHONY : src/EventLoop.s
+
+# target to generate assembly for a file
+src/EventLoop.cpp.s:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f net/CMakeFiles/src.dir/build.make net/CMakeFiles/src.dir/src/EventLoop.cpp.s
+.PHONY : src/EventLoop.cpp.s
+
 src/HttpResponse.o: src/HttpResponse.cpp.o
 .PHONY : src/HttpResponse.o
 
@@ -155,6 +179,30 @@ src/HttpResponse.cpp.s:
 	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f net/CMakeFiles/src.dir/build.make net/CMakeFiles/src.dir/src/HttpResponse.cpp.s
 .PHONY : src/HttpResponse.cpp.s
 
+src/InetAddress.o: src/InetAddress.cpp.o
+.PHONY : src/InetAddress.o
+
+# target to build an object file
+src/InetAddress.cpp.o:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f net/CMakeFiles/src.dir/build.make net/CMakeFiles/src.dir/src/InetAddress.cpp.o
+.PHONY : src/InetAddress.cpp.o
+
+src/InetAddress.i: src/InetAddress.cpp.i
+.PHONY : src/InetAddress.i
+
+# target to preprocess a source file
+src/InetAddress.cpp.i:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f net/CMakeFiles/src.dir/build.make net/CMakeFiles/src.dir/src/InetAddress.cpp.i
+.PHONY : src/InetAddress.cpp.i
+
+src/InetAddress.s: src/InetAddress.cpp.s
+.PHONY : src/InetAddress.s
+
+# target to generate assembly for a file
+src/InetAddress.cpp.s:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f net/CMakeFiles/src.dir/build.make net/CMakeFiles/src.dir/src/InetAddress.cpp.s
+.PHONY : src/InetAddress.cpp.s
+
 src/SocketsOps.o: src/SocketsOps.cpp.o
 .PHONY : src/SocketsOps.o
 
@@ -178,6 +226,30 @@ src/SocketsOps.s: src/SocketsOps.cpp.s
 src/SocketsOps.cpp.s:
 	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f net/CMakeFiles/src.dir/build.make net/CMakeFiles/src.dir/src/SocketsOps.cpp.s
 .PHONY : src/SocketsOps.cpp.s
+
+src/TcpServer.o: src/TcpServer.cpp.o
+.PHONY : src/TcpServer.o
+
+# target to build an object file
+src/TcpServer.cpp.o:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f net/CMakeFiles/src.dir/build.make net/CMakeFiles/src.dir/src/TcpServer.cpp.o
+.PHONY : src/TcpServer.cpp.o
+
+src/TcpServer.i: src/TcpServer.cpp.i
+.PHONY : src/TcpServer.i
+
+# target to preprocess a source file
+src/TcpServer.cpp.i:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f net/CMakeFiles/src.dir/build.make net/CMakeFiles/src.dir/src/TcpServer.cpp.i
+.PHONY : src/TcpServer.cpp.i
+
+src/TcpServer.s: src/TcpServer.cpp.s
+.PHONY : src/TcpServer.s
+
+# target to generate assembly for a file
+src/TcpServer.cpp.s:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f net/CMakeFiles/src.dir/build.make net/CMakeFiles/src.dir/src/TcpServer.cpp.s
+.PHONY : src/TcpServer.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -212,12 +284,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... src"
+	@echo "... src/EventLoop.o"
+	@echo "... src/EventLoop.i"
+	@echo "... src/EventLoop.s"
 	@echo "... src/HttpResponse.o"
 	@echo "... src/HttpResponse.i"
 	@echo "... src/HttpResponse.s"
+	@echo "... src/InetAddress.o"
+	@echo "... src/InetAddress.i"
+	@echo "... src/InetAddress.s"
 	@echo "... src/SocketsOps.o"
 	@echo "... src/SocketsOps.i"
 	@echo "... src/SocketsOps.s"
+	@echo "... src/TcpServer.o"
+	@echo "... src/TcpServer.i"
+	@echo "... src/TcpServer.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

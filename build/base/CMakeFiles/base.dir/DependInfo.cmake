@@ -9,7 +9,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/project/zero/base/src/Buffer.cpp" "base/CMakeFiles/base.dir/src/Buffer.cpp.o" "gcc" "base/CMakeFiles/base.dir/src/Buffer.cpp.o.d"
+  "/project/zero/base/src/Condition.cpp" "base/CMakeFiles/base.dir/src/Condition.cpp.o" "gcc" "base/CMakeFiles/base.dir/src/Condition.cpp.o.d"
+  "/project/zero/base/src/CurrentThread.cpp" "base/CMakeFiles/base.dir/src/CurrentThread.cpp.o" "gcc" "base/CMakeFiles/base.dir/src/CurrentThread.cpp.o.d"
   "/project/zero/base/src/ProcessInfo.cpp" "base/CMakeFiles/base.dir/src/ProcessInfo.cpp.o" "gcc" "base/CMakeFiles/base.dir/src/ProcessInfo.cpp.o.d"
+  "/project/zero/base/src/Thread.cpp" "base/CMakeFiles/base.dir/src/Thread.cpp.o" "gcc" "base/CMakeFiles/base.dir/src/Thread.cpp.o.d"
   "/project/zero/base/src/TimeZone.cpp" "base/CMakeFiles/base.dir/src/TimeZone.cpp.o" "gcc" "base/CMakeFiles/base.dir/src/TimeZone.cpp.o.d"
   )
 

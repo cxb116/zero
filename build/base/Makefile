@@ -155,6 +155,54 @@ src/Buffer.cpp.s:
 	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/base.dir/build.make base/CMakeFiles/base.dir/src/Buffer.cpp.s
 .PHONY : src/Buffer.cpp.s
 
+src/Condition.o: src/Condition.cpp.o
+.PHONY : src/Condition.o
+
+# target to build an object file
+src/Condition.cpp.o:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/base.dir/build.make base/CMakeFiles/base.dir/src/Condition.cpp.o
+.PHONY : src/Condition.cpp.o
+
+src/Condition.i: src/Condition.cpp.i
+.PHONY : src/Condition.i
+
+# target to preprocess a source file
+src/Condition.cpp.i:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/base.dir/build.make base/CMakeFiles/base.dir/src/Condition.cpp.i
+.PHONY : src/Condition.cpp.i
+
+src/Condition.s: src/Condition.cpp.s
+.PHONY : src/Condition.s
+
+# target to generate assembly for a file
+src/Condition.cpp.s:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/base.dir/build.make base/CMakeFiles/base.dir/src/Condition.cpp.s
+.PHONY : src/Condition.cpp.s
+
+src/CurrentThread.o: src/CurrentThread.cpp.o
+.PHONY : src/CurrentThread.o
+
+# target to build an object file
+src/CurrentThread.cpp.o:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/base.dir/build.make base/CMakeFiles/base.dir/src/CurrentThread.cpp.o
+.PHONY : src/CurrentThread.cpp.o
+
+src/CurrentThread.i: src/CurrentThread.cpp.i
+.PHONY : src/CurrentThread.i
+
+# target to preprocess a source file
+src/CurrentThread.cpp.i:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/base.dir/build.make base/CMakeFiles/base.dir/src/CurrentThread.cpp.i
+.PHONY : src/CurrentThread.cpp.i
+
+src/CurrentThread.s: src/CurrentThread.cpp.s
+.PHONY : src/CurrentThread.s
+
+# target to generate assembly for a file
+src/CurrentThread.cpp.s:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/base.dir/build.make base/CMakeFiles/base.dir/src/CurrentThread.cpp.s
+.PHONY : src/CurrentThread.cpp.s
+
 src/ProcessInfo.o: src/ProcessInfo.cpp.o
 .PHONY : src/ProcessInfo.o
 
@@ -178,6 +226,30 @@ src/ProcessInfo.s: src/ProcessInfo.cpp.s
 src/ProcessInfo.cpp.s:
 	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/base.dir/build.make base/CMakeFiles/base.dir/src/ProcessInfo.cpp.s
 .PHONY : src/ProcessInfo.cpp.s
+
+src/Thread.o: src/Thread.cpp.o
+.PHONY : src/Thread.o
+
+# target to build an object file
+src/Thread.cpp.o:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/base.dir/build.make base/CMakeFiles/base.dir/src/Thread.cpp.o
+.PHONY : src/Thread.cpp.o
+
+src/Thread.i: src/Thread.cpp.i
+.PHONY : src/Thread.i
+
+# target to preprocess a source file
+src/Thread.cpp.i:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/base.dir/build.make base/CMakeFiles/base.dir/src/Thread.cpp.i
+.PHONY : src/Thread.cpp.i
+
+src/Thread.s: src/Thread.cpp.s
+.PHONY : src/Thread.s
+
+# target to generate assembly for a file
+src/Thread.cpp.s:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/base.dir/build.make base/CMakeFiles/base.dir/src/Thread.cpp.s
+.PHONY : src/Thread.cpp.s
 
 src/TimeZone.o: src/TimeZone.cpp.o
 .PHONY : src/TimeZone.o
@@ -215,9 +287,18 @@ help:
 	@echo "... src/Buffer.o"
 	@echo "... src/Buffer.i"
 	@echo "... src/Buffer.s"
+	@echo "... src/Condition.o"
+	@echo "... src/Condition.i"
+	@echo "... src/Condition.s"
+	@echo "... src/CurrentThread.o"
+	@echo "... src/CurrentThread.i"
+	@echo "... src/CurrentThread.s"
 	@echo "... src/ProcessInfo.o"
 	@echo "... src/ProcessInfo.i"
 	@echo "... src/ProcessInfo.s"
+	@echo "... src/Thread.o"
+	@echo "... src/Thread.i"
+	@echo "... src/Thread.s"
 	@echo "... src/TimeZone.o"
 	@echo "... src/TimeZone.i"
 	@echo "... src/TimeZone.s"

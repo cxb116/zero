@@ -1,6 +1,5 @@
 #pragma once
 
-#include <base/copyable.h>
 #include <base/Types.h>
 
 #include <map>
@@ -9,7 +8,7 @@ namespace zero
 namespace net 
 {
 class Buffer;
-class HttpResponse : public zero::copyable {
+class HttpResponse {
 public:
     enum HttpStatusCode {
         kUnknown,

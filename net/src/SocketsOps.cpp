@@ -103,26 +103,6 @@ void sockets::shutdownWrite(int sockfd) {
     } 
 }
 
-void sockets::toIpPort(char* buf,size_t size,const struct sockaddr* addr) {
-    toIp(buf,size,addr);
-    size_t end = ::strlen(buf);
-    const struct sockaddr_in* addr4 = sockaddr_in_cast(addr);
-    u_int16_t port = ntohs(addr4->sin_port);
-    //uint16_t port = sockets::networkToHost16(addr4->sin_addr);
-    assert(size > end);
-        snprintf(buf + end, size - end,":%u",port);
-}
-
-void sockets::toIp(char* buf, size_t size, const struct sockaddr* addr) {
-    if(addr->sa_family == AF_INET) {
-        assert(size >= INET_ADDRSTRLEN);
-        const struct sockaddr_in* addr4 = sockaddr_in_cast(addr);
-        ::inet_ntop(AF_INET,&addr4->sin_addr,buf,static_cast<socklen_t>(size));
-    }else {
-        printf("addr_sa_family = AF_INET6 \n");
-    }
-}
-
 void sockets::fromIpPort(const char* ip,uint16_t port,struct sockaddr_in* addr) {
     addr->sin_family = AF_INET;
     addr->sin_port = htons(port);

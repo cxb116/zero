@@ -1,6 +1,6 @@
-net/CMakeFiles/src.dir/src/HttpResponse.cpp.o: \
- /project/zero/net/src/HttpResponse.cpp /usr/include/stdc-predef.h \
- /project/zero/net/include/net/HttpResponse.h \
+base/CMakeFiles/base.dir/src/CurrentThread.cpp.o: \
+ /project/zero/base/src/CurrentThread.cpp /usr/include/stdc-predef.h \
+ /project/zero/base/include/base/CurrentThread.h \
  /project/zero/base/include/base/Types.h \
  /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
@@ -113,39 +113,8 @@ net/CMakeFiles/src.dir/src/HttpResponse.cpp.o: \
  /usr/include/c++/12/bits/functional_hash.h \
  /usr/include/c++/12/bits/hash_bytes.h \
  /usr/include/c++/12/bits/basic_string.tcc /usr/include/assert.h \
- /usr/include/c++/12/map /usr/include/c++/12/bits/stl_tree.h \
- /usr/include/c++/12/ext/aligned_buffer.h \
- /usr/include/c++/12/bits/stl_map.h /usr/include/c++/12/tuple \
- /usr/include/c++/12/bits/uses_allocator.h \
- /usr/include/c++/12/bits/stl_multimap.h \
- /usr/include/c++/12/bits/erase_if.h \
- /project/zero/base/include/base/Buffer.h \
- /project/zero/base/include/base/copyable.h \
- /project/zero/base/include/base/StringPiece.h \
- /project/zero/base/include/base/Endian.h /usr/include/arpa/inet.h \
- /usr/include/netinet/in.h /usr/include/x86_64-linux-gnu/sys/socket.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
- /usr/include/x86_64-linux-gnu/bits/socket.h \
- /usr/include/x86_64-linux-gnu/bits/socket_type.h \
- /usr/include/x86_64-linux-gnu/bits/sockaddr.h \
- /usr/include/x86_64-linux-gnu/asm/socket.h \
- /usr/include/asm-generic/socket.h /usr/include/linux/posix_types.h \
- /usr/include/linux/stddef.h \
- /usr/include/x86_64-linux-gnu/asm/posix_types.h \
- /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
- /usr/include/asm-generic/posix_types.h \
- /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
- /usr/include/asm-generic/bitsperlong.h \
- /usr/include/x86_64-linux-gnu/asm/sockios.h \
- /usr/include/asm-generic/sockios.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
- /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/c++/12/algorithm \
- /usr/include/c++/12/bits/stl_algo.h \
- /usr/include/c++/12/bits/algorithmfwd.h \
- /usr/include/c++/12/bits/stl_heap.h \
- /usr/include/c++/12/bits/stl_tempbuf.h \
- /usr/include/c++/12/bits/uniform_int_dist.h /usr/include/c++/12/vector \
- /usr/include/c++/12/bits/stl_uninitialized.h \
- /usr/include/c++/12/bits/stl_vector.h \
- /usr/include/c++/12/bits/stl_bvector.h \
- /usr/include/c++/12/bits/vector.tcc
+ /usr/include/c++/12/cxxabi.h \
+ /usr/include/x86_64-linux-gnu/c++/12/bits/cxxabi_tweaks.h \
+ /usr/include/c++/12/bits/cxxabi_init_exception.h \
+ /usr/include/c++/12/typeinfo /usr/include/execinfo.h \
+ /usr/include/c++/12/stdlib.h

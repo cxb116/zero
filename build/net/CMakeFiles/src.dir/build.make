@@ -69,10 +69,24 @@ include net/CMakeFiles/src.dir/progress.make
 # Include the compile flags for this target's objects.
 include net/CMakeFiles/src.dir/flags.make
 
+net/CMakeFiles/src.dir/src/EventLoop.cpp.o: net/CMakeFiles/src.dir/flags.make
+net/CMakeFiles/src.dir/src/EventLoop.cpp.o: /project/zero/net/src/EventLoop.cpp
+net/CMakeFiles/src.dir/src/EventLoop.cpp.o: net/CMakeFiles/src.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/project/zero/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object net/CMakeFiles/src.dir/src/EventLoop.cpp.o"
+	cd /project/zero/build/net && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT net/CMakeFiles/src.dir/src/EventLoop.cpp.o -MF CMakeFiles/src.dir/src/EventLoop.cpp.o.d -o CMakeFiles/src.dir/src/EventLoop.cpp.o -c /project/zero/net/src/EventLoop.cpp
+
+net/CMakeFiles/src.dir/src/EventLoop.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/src/EventLoop.cpp.i"
+	cd /project/zero/build/net && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /project/zero/net/src/EventLoop.cpp > CMakeFiles/src.dir/src/EventLoop.cpp.i
+
+net/CMakeFiles/src.dir/src/EventLoop.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/src/EventLoop.cpp.s"
+	cd /project/zero/build/net && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /project/zero/net/src/EventLoop.cpp -o CMakeFiles/src.dir/src/EventLoop.cpp.s
+
 net/CMakeFiles/src.dir/src/HttpResponse.cpp.o: net/CMakeFiles/src.dir/flags.make
 net/CMakeFiles/src.dir/src/HttpResponse.cpp.o: /project/zero/net/src/HttpResponse.cpp
 net/CMakeFiles/src.dir/src/HttpResponse.cpp.o: net/CMakeFiles/src.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/project/zero/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object net/CMakeFiles/src.dir/src/HttpResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/project/zero/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object net/CMakeFiles/src.dir/src/HttpResponse.cpp.o"
 	cd /project/zero/build/net && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT net/CMakeFiles/src.dir/src/HttpResponse.cpp.o -MF CMakeFiles/src.dir/src/HttpResponse.cpp.o.d -o CMakeFiles/src.dir/src/HttpResponse.cpp.o -c /project/zero/net/src/HttpResponse.cpp
 
 net/CMakeFiles/src.dir/src/HttpResponse.cpp.i: cmake_force
@@ -83,10 +97,24 @@ net/CMakeFiles/src.dir/src/HttpResponse.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/src/HttpResponse.cpp.s"
 	cd /project/zero/build/net && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /project/zero/net/src/HttpResponse.cpp -o CMakeFiles/src.dir/src/HttpResponse.cpp.s
 
+net/CMakeFiles/src.dir/src/InetAddress.cpp.o: net/CMakeFiles/src.dir/flags.make
+net/CMakeFiles/src.dir/src/InetAddress.cpp.o: /project/zero/net/src/InetAddress.cpp
+net/CMakeFiles/src.dir/src/InetAddress.cpp.o: net/CMakeFiles/src.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/project/zero/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object net/CMakeFiles/src.dir/src/InetAddress.cpp.o"
+	cd /project/zero/build/net && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT net/CMakeFiles/src.dir/src/InetAddress.cpp.o -MF CMakeFiles/src.dir/src/InetAddress.cpp.o.d -o CMakeFiles/src.dir/src/InetAddress.cpp.o -c /project/zero/net/src/InetAddress.cpp
+
+net/CMakeFiles/src.dir/src/InetAddress.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/src/InetAddress.cpp.i"
+	cd /project/zero/build/net && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /project/zero/net/src/InetAddress.cpp > CMakeFiles/src.dir/src/InetAddress.cpp.i
+
+net/CMakeFiles/src.dir/src/InetAddress.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/src/InetAddress.cpp.s"
+	cd /project/zero/build/net && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /project/zero/net/src/InetAddress.cpp -o CMakeFiles/src.dir/src/InetAddress.cpp.s
+
 net/CMakeFiles/src.dir/src/SocketsOps.cpp.o: net/CMakeFiles/src.dir/flags.make
 net/CMakeFiles/src.dir/src/SocketsOps.cpp.o: /project/zero/net/src/SocketsOps.cpp
 net/CMakeFiles/src.dir/src/SocketsOps.cpp.o: net/CMakeFiles/src.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/project/zero/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object net/CMakeFiles/src.dir/src/SocketsOps.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/project/zero/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object net/CMakeFiles/src.dir/src/SocketsOps.cpp.o"
 	cd /project/zero/build/net && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT net/CMakeFiles/src.dir/src/SocketsOps.cpp.o -MF CMakeFiles/src.dir/src/SocketsOps.cpp.o.d -o CMakeFiles/src.dir/src/SocketsOps.cpp.o -c /project/zero/net/src/SocketsOps.cpp
 
 net/CMakeFiles/src.dir/src/SocketsOps.cpp.i: cmake_force
@@ -97,10 +125,24 @@ net/CMakeFiles/src.dir/src/SocketsOps.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/src/SocketsOps.cpp.s"
 	cd /project/zero/build/net && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /project/zero/net/src/SocketsOps.cpp -o CMakeFiles/src.dir/src/SocketsOps.cpp.s
 
+net/CMakeFiles/src.dir/src/TcpServer.cpp.o: net/CMakeFiles/src.dir/flags.make
+net/CMakeFiles/src.dir/src/TcpServer.cpp.o: /project/zero/net/src/TcpServer.cpp
+net/CMakeFiles/src.dir/src/TcpServer.cpp.o: net/CMakeFiles/src.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/project/zero/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object net/CMakeFiles/src.dir/src/TcpServer.cpp.o"
+	cd /project/zero/build/net && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT net/CMakeFiles/src.dir/src/TcpServer.cpp.o -MF CMakeFiles/src.dir/src/TcpServer.cpp.o.d -o CMakeFiles/src.dir/src/TcpServer.cpp.o -c /project/zero/net/src/TcpServer.cpp
+
+net/CMakeFiles/src.dir/src/TcpServer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/src/TcpServer.cpp.i"
+	cd /project/zero/build/net && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /project/zero/net/src/TcpServer.cpp > CMakeFiles/src.dir/src/TcpServer.cpp.i
+
+net/CMakeFiles/src.dir/src/TcpServer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/src/TcpServer.cpp.s"
+	cd /project/zero/build/net && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /project/zero/net/src/TcpServer.cpp -o CMakeFiles/src.dir/src/TcpServer.cpp.s
+
 net/CMakeFiles/src.dir/src/main.cpp.o: net/CMakeFiles/src.dir/flags.make
 net/CMakeFiles/src.dir/src/main.cpp.o: /project/zero/net/src/main.cpp
 net/CMakeFiles/src.dir/src/main.cpp.o: net/CMakeFiles/src.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/project/zero/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object net/CMakeFiles/src.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/project/zero/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object net/CMakeFiles/src.dir/src/main.cpp.o"
 	cd /project/zero/build/net && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT net/CMakeFiles/src.dir/src/main.cpp.o -MF CMakeFiles/src.dir/src/main.cpp.o.d -o CMakeFiles/src.dir/src/main.cpp.o -c /project/zero/net/src/main.cpp
 
 net/CMakeFiles/src.dir/src/main.cpp.i: cmake_force
@@ -113,20 +155,26 @@ net/CMakeFiles/src.dir/src/main.cpp.s: cmake_force
 
 # Object files for target src
 src_OBJECTS = \
+"CMakeFiles/src.dir/src/EventLoop.cpp.o" \
 "CMakeFiles/src.dir/src/HttpResponse.cpp.o" \
+"CMakeFiles/src.dir/src/InetAddress.cpp.o" \
 "CMakeFiles/src.dir/src/SocketsOps.cpp.o" \
+"CMakeFiles/src.dir/src/TcpServer.cpp.o" \
 "CMakeFiles/src.dir/src/main.cpp.o"
 
 # External object files for target src
 src_EXTERNAL_OBJECTS =
 
+net/src: net/CMakeFiles/src.dir/src/EventLoop.cpp.o
 net/src: net/CMakeFiles/src.dir/src/HttpResponse.cpp.o
+net/src: net/CMakeFiles/src.dir/src/InetAddress.cpp.o
 net/src: net/CMakeFiles/src.dir/src/SocketsOps.cpp.o
+net/src: net/CMakeFiles/src.dir/src/TcpServer.cpp.o
 net/src: net/CMakeFiles/src.dir/src/main.cpp.o
 net/src: net/CMakeFiles/src.dir/build.make
 net/src: base/libbase.a
 net/src: net/CMakeFiles/src.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/project/zero/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable src"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/project/zero/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable src"
 	cd /project/zero/build/net && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/src.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
