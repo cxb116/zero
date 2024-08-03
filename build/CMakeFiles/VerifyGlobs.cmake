@@ -61,6 +61,7 @@ endif()
 # srcs at net/CMakeLists.txt:1 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/project/zero/net/src/*.cpp")
 set(OLD_GLOB
+  "/project/zero/net/src/Channel.cpp"
   "/project/zero/net/src/EventLoop.cpp"
   "/project/zero/net/src/HttpResponse.cpp"
   "/project/zero/net/src/InetAddress.cpp"

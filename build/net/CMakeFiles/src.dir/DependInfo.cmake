@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/project/zero/net/src/Channel.cpp" "net/CMakeFiles/src.dir/src/Channel.cpp.o" "gcc" "net/CMakeFiles/src.dir/src/Channel.cpp.o.d"
   "/project/zero/net/src/EventLoop.cpp" "net/CMakeFiles/src.dir/src/EventLoop.cpp.o" "gcc" "net/CMakeFiles/src.dir/src/EventLoop.cpp.o.d"
   "/project/zero/net/src/HttpResponse.cpp" "net/CMakeFiles/src.dir/src/HttpResponse.cpp.o" "gcc" "net/CMakeFiles/src.dir/src/HttpResponse.cpp.o.d"
   "/project/zero/net/src/InetAddress.cpp" "net/CMakeFiles/src.dir/src/InetAddress.cpp.o" "gcc" "net/CMakeFiles/src.dir/src/InetAddress.cpp.o.d"

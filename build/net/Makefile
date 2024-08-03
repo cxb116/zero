@@ -131,6 +131,30 @@ src/fast:
 	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f net/CMakeFiles/src.dir/build.make net/CMakeFiles/src.dir/build
 .PHONY : src/fast
 
+src/Channel.o: src/Channel.cpp.o
+.PHONY : src/Channel.o
+
+# target to build an object file
+src/Channel.cpp.o:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f net/CMakeFiles/src.dir/build.make net/CMakeFiles/src.dir/src/Channel.cpp.o
+.PHONY : src/Channel.cpp.o
+
+src/Channel.i: src/Channel.cpp.i
+.PHONY : src/Channel.i
+
+# target to preprocess a source file
+src/Channel.cpp.i:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f net/CMakeFiles/src.dir/build.make net/CMakeFiles/src.dir/src/Channel.cpp.i
+.PHONY : src/Channel.cpp.i
+
+src/Channel.s: src/Channel.cpp.s
+.PHONY : src/Channel.s
+
+# target to generate assembly for a file
+src/Channel.cpp.s:
+	cd /project/zero/build && $(MAKE) $(MAKESILENT) -f net/CMakeFiles/src.dir/build.make net/CMakeFiles/src.dir/src/Channel.cpp.s
+.PHONY : src/Channel.cpp.s
+
 src/EventLoop.o: src/EventLoop.cpp.o
 .PHONY : src/EventLoop.o
 
@@ -284,6 +308,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... src"
+	@echo "... src/Channel.o"
+	@echo "... src/Channel.i"
+	@echo "... src/Channel.s"
 	@echo "... src/EventLoop.o"
 	@echo "... src/EventLoop.i"
 	@echo "... src/EventLoop.s"

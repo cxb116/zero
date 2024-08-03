@@ -106,7 +106,7 @@ private:
     bool addedToLoop_;     /* assert 跟新channel后才能~channel */
 
     /* 因为channel通道里面能够获取fd最终发生的具体事件revents,所以他负责调用具体事件的回调操作*/
-    ReadEventCallback readCallback_;    /* 读回调 */
+    ReadEventCallback  readCallback_;    /* 读回调 */
     EventCallback writeCallback_;       /* 写回调 */
     EventCallback closeCallback_;       /*  关闭回调 */
     EventCallback errorCallback_;        /* 错误回调 */

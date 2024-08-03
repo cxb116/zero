@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/src.dir/src/Channel.cpp.o"
+  "CMakeFiles/src.dir/src/Channel.cpp.o.d"
   "CMakeFiles/src.dir/src/EventLoop.cpp.o"
   "CMakeFiles/src.dir/src/EventLoop.cpp.o.d"
   "CMakeFiles/src.dir/src/HttpResponse.cpp.o"

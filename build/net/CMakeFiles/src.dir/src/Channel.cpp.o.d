@@ -1,6 +1,6 @@
-net/CMakeFiles/src.dir/src/EventLoop.cpp.o: \
- /project/zero/net/src/EventLoop.cpp /usr/include/stdc-predef.h \
- /project/zero/net/include/net/EventLoop.h /usr/include/c++/12/iostream \
+net/CMakeFiles/src.dir/src/Channel.cpp.o: \
+ /project/zero/net/src/Channel.cpp /usr/include/stdc-predef.h \
+ /usr/include/c++/12/iostream \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -145,7 +145,9 @@ net/CMakeFiles/src.dir/src/EventLoop.cpp.o: \
  /usr/include/c++/12/bits/locale_facets.tcc \
  /usr/include/c++/12/bits/basic_ios.tcc \
  /usr/include/c++/12/bits/ostream.tcc /usr/include/c++/12/istream \
- /usr/include/c++/12/bits/istream.tcc /usr/include/c++/12/functional \
+ /usr/include/c++/12/bits/istream.tcc \
+ /project/zero/net/include/net/Channel.h /usr/include/string.h \
+ /usr/include/strings.h /usr/include/c++/12/functional \
  /usr/include/c++/12/tuple /usr/include/c++/12/bits/uses_allocator.h \
  /usr/include/c++/12/bits/std_function.h /usr/include/c++/12/memory \
  /usr/include/c++/12/bits/stl_uninitialized.h \
@@ -161,13 +163,9 @@ net/CMakeFiles/src.dir/src/EventLoop.cpp.o: \
  /usr/include/c++/12/bits/shared_ptr_atomic.h \
  /usr/include/c++/12/bits/atomic_base.h \
  /usr/include/c++/12/bits/atomic_lockfree_defines.h \
- /usr/include/c++/12/backward/auto_ptr.h /usr/include/c++/12/atomic \
- /usr/include/c++/12/vector /usr/include/c++/12/bits/stl_vector.h \
- /usr/include/c++/12/bits/stl_bvector.h \
- /usr/include/c++/12/bits/vector.tcc \
+ /usr/include/c++/12/backward/auto_ptr.h \
  /project/zero/base/include/base/Timestamp.h \
- /project/zero/base/include/base/Types.h /usr/include/string.h \
- /usr/include/strings.h /usr/include/assert.h \
+ /project/zero/base/include/base/Types.h /usr/include/assert.h \
  /project/zero/base/include/base/copyable.h \
  /usr/include/boost/operators.hpp /usr/include/c++/12/cstddef \
  /usr/include/c++/12/iterator /usr/include/c++/12/bits/stream_iterator.h \
@@ -191,10 +189,17 @@ net/CMakeFiles/src.dir/src/EventLoop.cpp.o: \
  /usr/include/boost/config/helper_macros.hpp \
  /usr/include/boost/detail/workaround.hpp \
  /usr/include/boost/config/workaround.hpp \
- /usr/include/boost/core/addressof.hpp /usr/include/c++/12/mutex \
+ /usr/include/boost/core/addressof.hpp \
+ /project/zero/net/include/net/EventLoop.h /usr/include/c++/12/atomic \
+ /usr/include/c++/12/vector /usr/include/c++/12/bits/stl_vector.h \
+ /usr/include/c++/12/bits/stl_bvector.h \
+ /usr/include/c++/12/bits/vector.tcc /usr/include/c++/12/mutex \
  /usr/include/c++/12/bits/chrono.h /usr/include/c++/12/ratio \
  /usr/include/c++/12/limits /usr/include/c++/12/ctime \
  /usr/include/c++/12/bits/parse_numbers.h \
  /usr/include/c++/12/bits/std_mutex.h \
  /usr/include/c++/12/bits/unique_lock.h \
- /project/zero/base/include/base/CurrentThread.h
+ /project/zero/base/include/base/CurrentThread.h \
+ /usr/include/c++/12/sstream /usr/include/c++/12/bits/sstream.tcc \
+ /usr/include/x86_64-linux-gnu/sys/epoll.h \
+ /usr/include/x86_64-linux-gnu/bits/epoll.h
