@@ -3,6 +3,11 @@
 #include "copyable.h"
 #include <string>
 #include <boost/operators.hpp>
+#include <sys/time.h>
+#include <stdio.h>
+
+#include <time.h>
+#include <inttypes.h>
 
 namespace zero {
 
@@ -36,7 +41,14 @@ int64_t microSecondsSinceEpoch() const { return microSecondsSinceEpoch_;}
 time_t secondsSinceEpoch() const {
     return static_cast<time_t>(microSecondsSinceEpoch_ / KMicroSecondsPerSecond);
 }
-static Timestamp now();
+
+static Timestamp now() {
+    struct timeval tv;
+    gettimeofday(&tv,NULL);
+    int64_t seconds = tv.tv_sec;
+    return Timestamp(seconds * KMicroSecondsPerSecond + tv.tv_usec);
+}
+
 static Timestamp invalid() {
     return Timestamp();
 }

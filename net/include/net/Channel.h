@@ -98,7 +98,7 @@ private:
     const int fd_ ;      /* fd poll监听的对象 */
     int events_ ;        /* 注册fd 感兴的事件 */
     int revents_ ;       /* 返回的具体发生的事件 */
-    int index_;           
+    int index_;          /* 表示channel 是否已添加到poller中 */
     /* weak_ptr 监视 shared_ptr 提升成功过访问，提升失败就不访问，就说明已经释放掉了 */
     std::weak_ptr<void> tie_; /* 防止手动调removeChannle */
     bool tied_;            /* 判断弱智能指针是否绑定 */
