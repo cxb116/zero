@@ -42,13 +42,6 @@ EventLoop::EventLoop()
         wakeupChannel_->enableReading();
     }
 
-void EventLoop::handleRead() {
-        uint64_t one = 1;
-        ssize_t n = read(wakeupFd_, &one,sizeof(one));
-        if(n != sizeof(one)) {
-            printf("EventLoop::handleRead() read failed \n");
-        }
-}
 
 EventLoop::~EventLoop() {
         /* 对所有的事件都不感兴趣 */
@@ -86,8 +79,19 @@ void EventLoop::loop() {
             doPendingFunctions();
     }
 }
+/* 回调 */
 void EventLoop::doPendingFunctions() {
+     std::vector <Function> functions;
+     callingPendingFunctions_ = true;
 
+     {
+        std::unique_lock<std::mutex> lock(mutex_);
+        functions.swap(pendingFunctions_);
+     }
+     for(const Function& function: functions) {
+        function();
+     }
+     callingPendingFunctions_ = false;
 }
 
 // 退出事件循环， 1 loop在自己的线程中调用quit
@@ -102,7 +106,7 @@ void EventLoop::quit() {
     /* 在当前loop中执行cb */
 void EventLoop::runInLoop(Function cb) {
     if(isInLoopThread()) {
-        cb();
+        cb(); 
     } else {
         queueInLoop(std::move(cb));
     }
@@ -117,21 +121,40 @@ void EventLoop::queueInLoop(Function cb) {
 
     if(!isInLoopThread() || callingPendingFunctions_) {
         weakup();
+    } 
+}
+/* 用来唤醒loop 所在的线程的， 向weakupfd_ 写一个数据，
+    wakeupChannel 就发生读事件，当前loop线程程就会被唤醒 */
+void EventLoop::weakup() {
+    uint64_t one = 1;
+    ssize_t n = ::write(wakeupFd_ ,&one,sizeof(one));
+    if(n != sizeof(one)) {
+        printf("EventLoop::wakeup() writes data \n");
     }
 }
-/* 用来唤醒loop 所在的线程 */
-void EventLoop::weakup() {
 
+void EventLoop::handleRead() {
+        uint64_t one = 1;
+        ssize_t n = read(wakeupFd_, &one,sizeof(one));
+        if(n != sizeof(one)) {
+            printf("EventLoop::handleRead() read failed \n");
+        }
 }
 /* */
 void EventLoop::updateChannel(Channel* channel) {
-
+    assert(channel->ownerLoop() == this);
+    Poller_ptr_->updateChannel(channel);
 }
 void EventLoop::removeChannel(Channel* channel) {
-
+    assert(channel->ownerLoop() == this) ;
+    if(eventHandling_) {
+        
+    }
+    Poller_ptr_->removeChannel(channel);
 }
 bool EventLoop::hasChannel(Channel* channel) {
-    return true;
+    
+    return Poller_ptr_->hasChannel(channel);
 }
 
 
