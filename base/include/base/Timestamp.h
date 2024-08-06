@@ -41,7 +41,7 @@ int64_t microSecondsSinceEpoch() const { return microSecondsSinceEpoch_;}
 time_t secondsSinceEpoch() const {
     return static_cast<time_t>(microSecondsSinceEpoch_ / KMicroSecondsPerSecond);
 }
-
+   
 static Timestamp now() {
     struct timeval tv;
     gettimeofday(&tv,NULL);

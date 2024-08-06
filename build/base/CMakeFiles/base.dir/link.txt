@@ -1,0 +1,2 @@
+/usr/bin/ar qc libbase.a CMakeFiles/base.dir/src/Buffer.cpp.o CMakeFiles/base.dir/src/Condition.cpp.o CMakeFiles/base.dir/src/CurrentThread.cpp.o CMakeFiles/base.dir/src/ProcessInfo.cpp.o CMakeFiles/base.dir/src/Thread.cpp.o CMakeFiles/base.dir/src/TimeZone.cpp.o
+/usr/bin/ranlib libbase.a

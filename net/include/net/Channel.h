@@ -12,7 +12,8 @@ class Channel {
 public:
     using EventCallback = std::function<void()>;
     using ReadEventCallback = std::function<void(Timestamp)>;
-
+    using channelptr = std::shared_ptr<Channel*>;
+    channelptr channel_ptr;
     Channel(EventLoop *loop,int fd);
     ~Channel();
     /* 处理事件 */

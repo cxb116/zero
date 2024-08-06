@@ -7,8 +7,9 @@
 #include <base/Timestamp.h>
 #include <mutex>
 #include <base/CurrentThread.h>
+
 namespace zero {
-class Channel;
+class Channel; 
 class Poller;
 class EventLoop {
 public:
@@ -59,5 +60,6 @@ private:
     Channel* currentActiveChannel_;
     std::vector<Function> pendingFunctions_; //存储loop需要执行的所有回调操作 
     std::mutex mutex_; // 保护vector的线程安全 
+    bool eventHandling_;
 };
 }
