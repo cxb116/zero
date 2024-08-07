@@ -81,7 +81,7 @@ public:
     int index() { return index_;}
 
     void set_index(int index) { index_ = index; }
-    /* one loop per thread */
+    /* one loop one thread */
     EventLoop* ownerLoop() { return loop_; }
     /* delete channel */
     void remove();

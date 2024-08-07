@@ -31,6 +31,7 @@ Timestamp EPollerPoller::poll(int timeoutMs,ChannelList* activeChannels) {
     /* 有事件 */
     if(numEvents > 0) {
         std::cout<<"numEvents: "<< numEvents <<"\n";
+        /* 充满活跃的channels */
         fillActiveChannels(numEvents,activeChannels);
         if(numEvents == events_.size()) {       /* 如果numEvents的数量等于events_size() 就要进行扩容了 */
             events_.reserve(events_.size() * 2);
@@ -47,7 +48,7 @@ Timestamp EPollerPoller::poll(int timeoutMs,ChannelList* activeChannels) {
     }
     return now; 
 }
-
+/* 充满活跃的channel */
 void EPollerPoller::fillActiveChannels(int numEvents,ChannelList* activeChannels) const {
     assert(numEvents <= events_.size());
     for(int i = 0; i < numEvents; ++i) {
@@ -60,7 +61,7 @@ void EPollerPoller::fillActiveChannels(int numEvents,ChannelList* activeChannels
 /**
  * 2 epoll_ctl 在添加channel中的读写事件  add/mod/del 
 **/
-/* 跟新channels_,让传入的channel,看他是新的事件，还是读事件，写事件 */
+/* 跟新channels_,让传入的channel,看他新的事件，还是读事件，写事件 */
 void EPollerPoller::updateChannel(Channel* channel) {
     const int index = channel->index();
     if(index == kNew || index == kDelete) {
@@ -74,18 +75,18 @@ void EPollerPoller::updateChannel(Channel* channel) {
         channel->set_index(kAdded);   /* index_ setting kAdded */
         update(EPOLL_CTL_ADD,channel);
     }else { /* update existing one with EPOLL_CTL_MOD/DEL */
-            int fd = channel->fd();
-            // (void) fd;
+        int fd = channel->fd();
+        // (void) fd;
         /* assert(channels_.find(fd) != cahnnels_.end()); */
-            assert(index == kAdded);    /* 保证已经在channels_ 中添加了这个事件 */
-            assert(channels_[fd] == channel);
-            assert(channels_.find(fd) != channels_.end());
-            if(channel->isNoneEvent()) {   /* 检测events == 0 是不是成立 */
-                update(EPOLL_CTL_DEL,channel);
-                channel->set_index(kDelete);
-            } else {  
-                update(EPOLL_CTL_MOD,channel);
-            }
+        assert(index == kAdded);    /* 保证已经在channels_ 中添加了这个事件 */
+        assert(channels_[fd] == channel);
+        assert(channels_.find(fd) != channels_.end());
+        if(channel->isNoneEvent()) {   /* 检测events == 0 是不是成立 */
+            update(EPOLL_CTL_DEL,channel);
+            channel->set_index(kDelete);
+        } else {  
+            update(EPOLL_CTL_MOD,channel);
+        }
     }
 }
 /* 要移除首先要判断他存在于map */

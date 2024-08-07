@@ -8,7 +8,7 @@
 #include <net/Channel.h>
 #include <mutex>
 namespace zero {
-    /* 防止一个线程创建多个EventLoop   thread_local */
+     /* 防止一个线程创建多个EventLoop thread_local */
     __thread EventLoop* t_loopInThisThread = nullptr;
     /* 定义默认的Poller IO 复用的超时时间 */
     const int kEpollTimeMs = 10000;
@@ -28,7 +28,7 @@ EventLoop::EventLoop()
     , threadId_(CurrentThread::tid())
     , Poller_ptr_(Poller::newDefauoltPoller(this))
     , wakeupFd_(createEventfd())
-    , wakeupChannel_(new Channel(this, wakeupFd_)) 
+    , wakeupChannel_(new Channel(this, wakeupFd_))  /* 初始化wakeupFd_ 但没有事件*/
     , currentActiveChannel_ (nullptr) {
         printf("EventLoop::EventLoop() create in thread ");
         if(t_loopInThisThread) {
@@ -36,13 +36,14 @@ EventLoop::EventLoop()
          } else {
             t_loopInThisThread = this;
         }
-        /* 设 置wakeup 的事件类型以及发生事件后的回调操作 （唤醒poll）*/
+        /* 设置wakeup的事件类型以及发生事件后的回调操作 （唤醒poll subReater ）*/
+        /* wakeupfd 发送数据触发 subReator*/
         wakeupChannel_->setReadCallback(std::bind(&EventLoop::handleRead,this));
         /* 每一个eventloop 都将监听wakeupchannel的EPOLLIN读事件 */
         wakeupChannel_->enableReading();
-    }
+}
 
-
+ 
 EventLoop::~EventLoop() {
         /* 对所有的事件都不感兴趣 */
         wakeupChannel_->disableAll();
@@ -86,7 +87,7 @@ void EventLoop::doPendingFunctions() {
 
      {
         std::unique_lock<std::mutex> lock(mutex_);
-        functions.swap(pendingFunctions_);
+        functions.swap(pendingFunctions_);    
      }
      for(const Function& function: functions) {
         function();
@@ -134,12 +135,13 @@ void EventLoop::weakup() {
 }
 
 void EventLoop::handleRead() {
-        uint64_t one = 1;
-        ssize_t n = read(wakeupFd_, &one,sizeof(one));
-        if(n != sizeof(one)) {
-            printf("EventLoop::handleRead() read failed \n");
-        }
-}
+    uint64_t one = 1;
+    ssize_t n = read(wakeupFd_, &one,sizeof(one));
+    if(n != sizeof(one)) {
+        printf("EventLoop::handleRead() read data != 8 \n");
+    }
+} 
+
 /* */
 void EventLoop::updateChannel(Channel* channel) {
     assert(channel->ownerLoop() == this);
