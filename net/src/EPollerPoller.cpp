@@ -44,7 +44,7 @@ Timestamp EPollerPoller::poll(int timeoutMs,ChannelList* activeChannels) {
     else {
         if(saveErrno != EINTR) {
             std::cout<<"epoll_wait failed\n";
-        }
+        } 
     }
     return now; 
 }

@@ -59,14 +59,15 @@ void EventLoop::loop() {
         printf("EventLoop start loop \n");
         while(!quit_) {
             activeChannels_.clear();
-            /* 触发 epoll_wait 
-                subloop 
+            /* 触发 epoll_wait  subloop 
+        将epollfd 中所有的channel 拿出来，放入activeChannels_ 中
              */
             pollReturnTime_ = Poller_ptr_->poll(kEpollTimeMs,&activeChannels_);
 
             eventHandling_ = true;
             for(Channel* channel : activeChannels_) {
                 currentActiveChannel_ = channel; 
+                /* 当前activeChannel_ 设置为EPOLLIN或者EPOLLOUT */
                 currentActiveChannel_ ->handleEvent(pollReturnTime_);
             }
             currentActiveChannel_ = nullptr;
@@ -77,6 +78,7 @@ void EventLoop::loop() {
               wakeup subloop后，执行下面的方法，执行之前，执行mainloop
               注册的cb  
             */
+    /*queueloop -> runInloop 当前执行的loop中的执行cb  */       
             doPendingFunctions();
     }
 }
@@ -96,6 +98,9 @@ void EventLoop::doPendingFunctions() {
 }
 
 // 退出事件循环， 1 loop在自己的线程中调用quit
+/*有可能loop()只是执行while(!quit_)并退出，
+如果EventLoop被破坏，那么我们正在访问一个无效的对象。
+可以在两个位置使用mutex_来修复。*/
 void EventLoop::quit() {
     quit_ = true;
     if(!isInLoopThread()) {   /* 如果是在其他线程中调用 quit，比如实在subloop中，
@@ -124,16 +129,17 @@ void EventLoop::queueInLoop(Function cb) {
         weakup();
     } 
 }
-/* 用来唤醒loop 所在的线程的， 向weakupfd_ 写一个数据，
+/* 用来唤醒loop 所在的线程的， 向weakupfd_ 发送一个数据，
     wakeupChannel 就发生读事件，当前loop线程程就会被唤醒 */
 void EventLoop::weakup() {
     uint64_t one = 1;
+    /* write 写入文件描述符 然后才能读出来*/
     ssize_t n = ::write(wakeupFd_ ,&one,sizeof(one));
     if(n != sizeof(one)) {
         printf("EventLoop::wakeup() writes data \n");
     }
 }
-
+/* 读出wakeupFd 中的数据 */
 void EventLoop::handleRead() {
     uint64_t one = 1;
     ssize_t n = read(wakeupFd_, &one,sizeof(one));

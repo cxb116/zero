@@ -65,7 +65,7 @@ void Channel::handleEvent(Timestamp receiveTime) {
 
 void Channel::handleEventWithGuard(Timestamp receiveTime) {
     eventHanding_ = true;
-    /* 发生异常了 */
+    /*  EPOLLHUP fd 挂断 */
     if((revents_ & EPOLLHUP) && !(revents_ & EPOLLIN)) {
         if(closeCallback_) {
             closeCallback_();
