@@ -11,8 +11,7 @@ Thread::Thread(ThreadFunc func,const std::string& name)
     func_(std::move(func)),
     name_(name)
 {
-    setDefaultName();
- 
+    setDefaultName(); 
 } 
 
 Thread::~Thread() {
@@ -27,7 +26,7 @@ void Thread::start() {
     started_ = true;
     sem_t sem;
     sem_init(&sem,false,0); /* 初始化为0，表示没信号获取 */
-    thread_ = std::shared_ptr<std::thread>(new std::thread([&](){ /* 子线程 */
+    thread_ = std::shared_ptr<std::thread>(new std::thread([&]() { /* 子线程 */
         tid_ = CurrentThread::tid();    /* 获取线程的tid */
         sem_post(&sem);                 /* post 给线程+1 */
         func_();  /* 这个线程专门执行改线程函数 */
@@ -42,7 +41,7 @@ void Thread::join() {
         thread_->join();
     }
 }
-
+/* 设置一个默认的名字 */
 void Thread::setDefaultName() {
     int num = ++numCreate_;
     if(name_.empty()) {

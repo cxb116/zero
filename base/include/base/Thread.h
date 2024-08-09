@@ -7,13 +7,11 @@
 #include <unistd.h>
 #include <atomic>
 
-namespace zero {
-
-
+namespace zero { 
 class Thread {
 public:
     using ThreadFunc = std::function<void()>;
-
+ 
     explicit Thread(ThreadFunc func,const std::string &name = std::string());
     ~Thread();
 

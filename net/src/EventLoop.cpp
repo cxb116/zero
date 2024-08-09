@@ -164,8 +164,4 @@ bool EventLoop::hasChannel(Channel* channel) {
     
     return Poller_ptr_->hasChannel(channel);
 }
-
-
-
-
 }
