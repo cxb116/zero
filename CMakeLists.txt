@@ -16,6 +16,11 @@ include_directories(base/include/ net/include/)
 add_subdirectory(base)
 add_subdirectory(net)
 
+#=======================================================
+# 链接pthread库到可执行文件
+# 使用CMake提供的线程包而不是直接链接pthread
+# target_link_libraries(main pthread)
+
 # set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake;${CMAKE_MODULE_PATH}")
 # include (MyUserfulFuncs)
 # 设置cmake的全局变量
@@ -39,10 +44,6 @@ add_subdirectory(net)
 # target_sources(main PUBLIC ${sources})
 
 
-#=======================================================
-# 链接pthread库到可执行文件
-# 使用CMake提供的线程包而不是直接链接pthread
-#target_link_libraries(main pthread)
 
 
 
