@@ -39,7 +39,6 @@ public:
     }
 
 private:
-
     void handleRead();
     void doPendingFunctions();
 

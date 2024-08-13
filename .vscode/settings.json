@@ -54,6 +54,7 @@
         "typeinfo": "cpp",
         "condition_variable": "cpp",
         "mutex": "cpp",
-        "sstream": "cpp"
+        "sstream": "cpp",
+        "shared_mutex": "cpp"
     }
 }

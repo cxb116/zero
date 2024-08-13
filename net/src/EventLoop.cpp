@@ -7,6 +7,7 @@
 #include <net/EPollPoller.h>
 #include <net/Channel.h>
 #include <mutex>
+
 namespace zero {
      /* 防止一个线程创建多个EventLoop thread_local */
     __thread EventLoop* t_loopInThisThread = nullptr;
@@ -43,7 +44,7 @@ EventLoop::EventLoop()
         wakeupChannel_->enableReading();
 }
 
- 
+
 EventLoop::~EventLoop() {
         /* 对所有的事件都不感兴趣 */
         wakeupChannel_->disableAll();
