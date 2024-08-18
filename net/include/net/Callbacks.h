@@ -1,10 +1,12 @@
 #pragma once
 
+#include <net/TcpConnection.h>
 #include <base/Timestamp.h>
 #include <functional>
 #include <memory>
 
 namespace zero {
+
 using std::placeholders::_1;
 using std::placeholders::_2;
 using std::placeholders::_3;
@@ -15,7 +17,7 @@ inline T* get_pointer(const std::shared_ptr<T>& ptr) {
 }
 
 template <typename T>
-inline T* get_pointer(const std::unique_ptr<T>>& ptr) {
+inline T* get_pointer(const std::unique_ptr<T>& ptr) {
     return ptr.get();
 }
 

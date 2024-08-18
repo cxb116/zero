@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 using namespace zero;
-using namespace zero::net;
+
 
 // TcpServer::TcpServer(EventLoop* loop, const InetAddress& listenAddr,
 //                     const std::string& nameArg, Option option):
