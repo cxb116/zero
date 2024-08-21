@@ -4,7 +4,7 @@
 #include <iostream>
 namespace zero
 {
-EventLoopThreadPoll::EventLoopThreadPoll(EventLoop* baseLoop,const std::string &nameArg) 
+EventLoopThreadPool::EventLoopThreadPool(EventLoop* baseLoop,const std::string &nameArg) 
     : mainLoop_(baseLoop)
     , name_(nameArg) 
     , started_(false)
@@ -12,11 +12,11 @@ EventLoopThreadPoll::EventLoopThreadPoll(EventLoop* baseLoop,const std::string &
     , next_(0) {
 
 }
-EventLoopThreadPoll::~EventLoopThreadPoll() {
+EventLoopThreadPool::~EventLoopThreadPool() {
 
 }
 
-void EventLoopThreadPoll::start(const ThreadInitCallback& cb) {
+void EventLoopThreadPool::start(const ThreadInitCallback& cb) {
     started_ = true;
     /* numThreads_ 初始化为0 */
     for(int i = 0; i < numThreads_; ++i) {
@@ -32,7 +32,7 @@ void EventLoopThreadPoll::start(const ThreadInitCallback& cb) {
     }
 }
 /* mainLoop 默认以轮询的方式分配channel给subloop */
-EventLoop* EventLoopThreadPoll::getNextLoop() {
+EventLoop* EventLoopThreadPool::getNextLoop() {
     assert(started_);
     /* */
     EventLoop* loop = mainLoop_;
@@ -46,7 +46,7 @@ EventLoop* EventLoopThreadPoll::getNextLoop() {
     return loop;
 }
 /* 返回全部subloop 和 mainloop */
-std::vector<EventLoop*> EventLoopThreadPoll::getAllLoops() {
+std::vector<EventLoop*> EventLoopThreadPool::getAllLoops() {
     if(loops_.empty()) { /* 如果loops_ 为空*/
         return std::vector<EventLoop*>(1,mainLoop_);
     } else {

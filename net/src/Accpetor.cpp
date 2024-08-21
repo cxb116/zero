@@ -12,14 +12,14 @@ static int createNonlocking() {
 }
 
 /* 创建一个非阻塞的socket文件描述符 */
-Acceptor::Acceptor(EventLoop* loop, const InetAddress& listenAddr) 
+Acceptor::Acceptor(EventLoop* loop, const InetAddress& listenAddr, bool reusePort) 
     : loop_(loop)
     , acceptSocket_(createNonlocking())
     , acceptChannel_(loop, acceptSocket_.fd())
     , listening_(false) {
 
     acceptSocket_.setReuseAddr(true);
-    acceptSocket_.setReusePort(true);
+    acceptSocket_.setReusePort(reusePort);
     acceptSocket_.bindAddress(listenAddr);
     /*TcpServer::start() Accept.listen 有新用户的连接
     要执行一个回调，(connfd ==> channel => subloop ) */

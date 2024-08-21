@@ -55,6 +55,8 @@
         "condition_variable": "cpp",
         "mutex": "cpp",
         "sstream": "cpp",
-        "shared_mutex": "cpp"
+        "shared_mutex": "cpp",
+        "buffer": "cpp",
+        "netfwd": "cpp"
     }
 }

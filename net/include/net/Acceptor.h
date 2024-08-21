@@ -14,7 +14,7 @@ class Acceptor {
 public:
     using NewConnectionCallback = std::function<void(int sockfd, const InetAddress&)>;
     using accept_ptr = std::shared_ptr<Acceptor>;
-    Acceptor(EventLoop* loop,const InetAddress& listenAddr);
+    Acceptor(EventLoop* loop,const InetAddress& listenAddr,bool reusePort = false);
     ~Acceptor();
     void setNewConnectionCallback(const NewConnectionCallback& cb) {
         newConnectionCallback_ = cb;

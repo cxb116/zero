@@ -1,10 +1,8 @@
 #pragma once
-
 #include <net/TcpConnection.h>
 #include <base/Timestamp.h>
 #include <functional>
 #include <memory>
-
 namespace zero {
 
 using std::placeholders::_1;
