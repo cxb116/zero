@@ -1,0 +1,8 @@
+/project/zero/bu/CMakeFiles/edit_cache.dir
+/project/zero/bu/CMakeFiles/rebuild_cache.dir
+/project/zero/bu/base/CMakeFiles/base.dir
+/project/zero/bu/base/CMakeFiles/edit_cache.dir
+/project/zero/bu/base/CMakeFiles/rebuild_cache.dir
+/project/zero/bu/net/CMakeFiles/src.dir
+/project/zero/bu/net/CMakeFiles/edit_cache.dir
+/project/zero/bu/net/CMakeFiles/rebuild_cache.dir

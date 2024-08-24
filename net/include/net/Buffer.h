@@ -26,6 +26,7 @@ public:
           readerIndex_(kCheapPrepend),
           writerIndex_(kCheapPrepend) {
     }
+    
     /* 可读缓冲区大小 */
     size_t readableBytes() const { return writerIndex_ - readerIndex_; }
     /* 可写缓冲区大小 */
@@ -79,9 +80,24 @@ public:
         if(writableBytes() + prependableBytes() < len + kCheapPrepend) {
             buffer_.resize(writerIndex_ + len);
         }
+    } 
+    /* 写入拼接 */
+    void append(const char* data,size_t  len) {
+        ensureWriteableBytes(len);
+        std::copy(data,data+len,beginWrite());
+        writerIndex_ += len;
     }
 
+    char* beginWrite() {
+        return begin() + writerIndex_;
+    }
+    const char* beginWrite() const {
+        return begin() + writerIndex_;
+    }
 
+    /* 从fd 上读取数据 */
+    ssize_t readFd(int fd,int* saveErrno);
+    ssize_t writeFd(int fd);
 private:
     /* 获取首地址*/
     char* begin() {
